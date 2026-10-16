@@ -1,0 +1,1053 @@
+/* Reset */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --background: #f9f8f2;
+    --text: #292923;
+    --muted: #77776f;
+    --border: #d9d8ce;
+    --accent: #e9b9ba;
+    --green: #879a56;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Inter", Arial, sans-serif;
+    background: #282829;
+    color: var(--text);
+    line-height: 1.6;
+}
+
+button {
+    font: inherit;
+}
+
+.page {
+    width: 1440px;
+    max-width: 100%;
+    height: 1886px;
+    margin: 0 auto;
+    background:#FBFAF8;
+    box-sizing: border-box;
+    border-top-width: 1px;
+    border-bottom-width: 1px;
+
+}
+
+
+/* Hero Section */
+
+.hero {
+    position: relative;
+    width: 1400px;
+    height: 514px;
+    gap: 10px;
+    padding: 20px;
+    opacity: 1;
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: 750px 650px;
+    align-items: center;
+    overflow: hidden;
+    
+}
+.hero-sec{
+    width: 1440px;
+    height: 554px;
+}
+.hero-heading {
+    grid-column: 1;
+    grid-row: 1;
+    position: relative;
+    z-index: 2;
+    align-self: start;
+    display: flex;
+    flex-direction: column;
+    width: 749px;
+    height: 180px;
+    gap: 28px;
+    opacity: 1;
+}
+.hero-description {
+    position: absolute;
+    top: 346px;
+    left: 20px;
+    width: 469px;
+    height: 168px;
+    max-width: none;
+    margin: 0;
+    opacity: 1;
+    padding: 32px 111px 36px 29px;
+    border: 0;
+    z-index: 3;
+    
+}
+
+.hero-description::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background:
+        repeating-linear-gradient(to right, #e97948 0 7px, transparent 7px 14px) top left / 100% 1.6px no-repeat,
+        repeating-linear-gradient(to bottom, #e97948 0 7px, transparent 7px 14px) top left / 1.6px 100% no-repeat;
+}
+/* dot */
+.hero-description::after {
+    content: "";
+    position: absolute;
+    top: -4px;
+    right: -4px;
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background: #e97948;
+}
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+.eyebrow {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 22px;
+    color: var(--muted);
+}
+
+.hero h1 {
+    width: 711px;
+    opacity: 1;
+    font-family: 'Manrope', sans-serif;
+    font-weight: 800;
+    font-size: 105px;
+    line-height: 130%;
+    letter-spacing: 0%;
+    text-align: center;
+    text-transform: uppercase;
+    text-box: trim-both cap alphabetic;
+}
+
+.hero h1 span {
+    display: inline-block;
+    margin-top: 12px;
+}
+
+/* Har heading line alag block hai (Figma me bhi alag text layers hain) */
+.hero-line {
+    display: block;
+    white-space: nowrap;
+    text-box: trim-both cap alphabetic;
+}
+
+.hero-line {
+    display: block;
+    white-space: nowrap;
+    text-box: trim-both cap alphabetic;
+}
+.hero-description p {
+    width: 328px;
+    height: 99px;
+    top: 33px;
+    left: 30px;
+    font-family: 'Manrope', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 180%;
+    letter-spacing: 0%;
+    text-box: trim-both cap alphabetic;
+    color: #282829;
+}
+
+.hero-product {
+    min-height: 370px;
+    position: static;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background:
+        radial-gradient(
+            ellipse at center,
+            #e8e2ce 0%,
+            #f9f8f2 65%
+        );
+}
+.hero-bottom-heading {
+    position: absolute;
+    top: 334px;
+    left: 629px;
+    width: 771px;
+    height: 180px;
+    gap: 28px;
+    opacity: 1;
+    font-family: 'Manrope', sans-serif;
+    font-weight: 800;
+    font-size: 105px;
+    line-height: 130%;
+    letter-spacing: 0%;
+    text-transform: uppercase;
+    color: #282829;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+.hero-product {
+    grid-column: 2;
+    grid-row: 1 / 3;
+    position: static;
+    min-width: 0;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+}
+
+.hero-tablet {
+    position: absolute;
+    top: 20px;
+    left: 490px;
+    width: 419.79px;
+    height: 514px;
+    max-height: none;
+    opacity: 1;
+    object-fit: contain;
+    object-position: center;
+}
+
+.product-shadow {
+    position: absolute;
+    bottom: 45px;
+    width: 250px;
+    height: 24px;
+    background: #aaa38c;
+    opacity: 0.25;
+    filter: blur(14px);
+    border-radius: 50%;
+}
+
+
+/* CSS Bottle Illustration */
+
+.serum-bottle {
+    position: relative;
+    width: 115px;
+    height: 245px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 1;
+    filter: drop-shadow(12px 12px 8px #6d5a3740);
+}
+
+.bottle-cap {
+    width: 30px;
+    height: 36px;
+    background: #28251f;
+    border-radius: 5px 5px 2px 2px;
+}
+
+.bottle-neck {
+    width: 35px;
+    height: 18px;
+    background: #98713b;
+}
+
+.bottle-body {
+    height: 190px;
+    width: 105px;
+    border-radius: 14px 14px 20px 20px;
+    background: linear-gradient(
+        90deg,
+        #7d4d1c,
+        #c9953e 22%,
+        #e5bd68 45%,
+        #a36a27 75%,
+        #75451b
+    );
+    border: 1px solid #a67b3f;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #fff8e8;
+    box-shadow: inset 8px 0 12px #ffffff24;
+}
+
+.bottle-brand {
+    font-size: 11px;
+    letter-spacing: 2px;
+    font-weight: 700;
+}
+
+.bottle-label {
+    font-size: 10px;
+    margin-top: 8px;
+    letter-spacing: 1px;
+}
+
+.bottle-volume {
+    font-size: 8px;
+    margin-top: 12px;
+}
+
+
+/* Features */
+
+.features {
+    display: grid;
+    grid-template-columns: repeat(4, 360px);
+    width: 1440px;
+    height: 182px;
+    opacity: 1;
+    background: #fbfaf7;
+
+}
+.feature-card {
+    min-width: 0;
+    width: 360px;
+    height: 182px;
+    opacity: 1;
+    padding: 23px 23px 29px 24px;
+    border: 1px solid #282829;
+    box-sizing: border-box;
+    border-top: 1px solid #282829;
+    border-left: 1px solid #282829;
+    border-bottom: 1px solid #282829;
+    border-right: 0;
+}
+
+
+.feature-card:last-child {  
+    border-right: 1px solid #282829;
+}
+.feature-icon {
+    display: flex;
+    width: 32px;
+    height: 32px;
+    margin-bottom: 26px;
+    border: 0.4px solid #FFFFFF;
+}
+
+.feature-icon img {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.feature-card {
+    min-width: 0;
+    width: 360px;
+    height: 182px;
+    opacity: 1;
+    padding: 23px 23px 29px 24px;
+    border: 1px solid #282829;
+    border-left: 0;
+}
+
+.feature-card h3 {
+    margin: 0 0 18px;
+    width: 312px;
+    height: 13px;
+    font-family: 'Manrope', sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 130%;
+    letter-spacing: 0%;
+    text-box: trim-both cap alphabetic;
+    color: #282829;
+}
+
+.feature-card p {
+    margin: 0;
+    width: 312px;
+    height: 41px;
+    font-family: 'Manrope', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 180%;
+    letter-spacing: 0%;
+    text-box: trim-both cap alphabetic;
+    color: #282829;
+}
+
+
+/* Highlight Banner */
+
+.highlight-banner {
+    width: 1340px;
+    height: 88px;
+    margin: 56px auto 60px;
+    padding: 23px 29px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+    opacity: 1;
+    text-align: center;
+    background: #f0dede;
+    border: 1px solid #DC7444;
+}
+
+.highlight-icon {
+    display: flex;
+    flex-shrink: 0;
+    width: 40px;
+    height: 40px;
+}
+
+.highlight-icon img {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.highlight-banner p {
+    width: 1070px;
+    height: 17px;
+    margin: 0;
+    font-family: 'Manrope', sans-serif;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-align: center;
+    white-space: nowrap;
+    text-box: trim-both cap alphabetic;
+}
+
+/* Ingredients */
+
+.ingredients {
+    display: grid;
+    grid-template-columns: 720px 1fr;
+    height: 683px;
+    margin-top: 30px;
+}
+
+.ingredients-image {
+    width: 720px;
+    height: 683px;
+    opacity: 1;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid #282829;
+    border-left: 0;
+}
+
+.bottle-photo {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.image-decoration {
+    position: absolute;
+    width: 180px;
+    height: 650px;
+    background: #ffffff55;
+    transform: rotate(-35deg);
+}
+
+.decoration-one {
+    left: -100px;
+}
+
+.decoration-two {
+    right: -120px;
+}
+
+.large-bottle {
+    transform: scale(1.15);
+    z-index: 2;
+}
+
+.bottle-stand {
+    position: absolute;
+    bottom: 35px;
+    width: 220px;
+    height: 65px;
+    border-radius: 50%;
+    background: linear-gradient(
+        180deg,
+        #d4c7a9,
+        #a99979
+    );
+    box-shadow: 0 15px 25px #00000012;
+}
+
+.ingredients-content {
+    width: 720px;
+    height: 683px;
+    padding: 0;
+    opacity: 1;
+}
+
+
+.ingredients-content h2 {
+    width: 720px;
+    height: 161px;
+    margin: 0;
+    padding: 23px 30px;
+    border-top: 1px solid #282829;
+    border-bottom: 1px solid #282829;
+    font-family: 'Manrope', sans-serif;
+    font-weight: 500;
+    font-size: 62px;
+    line-height: 110%;
+    letter-spacing: 0%;
+    text-transform: uppercase;
+    text-box: trim-both cap alphabetic;
+}
+
+
+.ingredient-item {
+    width: 720px;
+    height: 174px;
+    padding: 24px 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    border-bottom: 1px solid #282829;
+}
+
+.ingredient-icon {
+    color: var(--green);
+    font-size: 20px;
+    flex-shrink: 0;
+}
+
+.ingredient-item h3 {
+    width: 650px;
+    height: 11px;
+    margin: 0 0 6px;
+    font-family: 'Manrope', sans-serif;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 130%;
+    letter-spacing: 0%;
+    text-box: trim-both cap alphabetic;
+}
+.ingredient-item h3 span{
+    font-family: 'Manrope', sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 160%;
+    letter-spacing: 0%;
+}
+
+.ingredient-item p {
+    width: 660px;
+    height: 11px;
+    font-weight: 500;
+    color: #040404;
+    font-family: 'Manrope', sans-serif;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 160%;
+    letter-spacing: 0%;
+}
+
+/* ingrediant link */
+.ingredients-link {
+  width: 100%;
+  max-width: 1440px;
+  height: 86px;
+  box-sizing: border-box;
+  padding: 30px 50px 40px 50px;
+  display: flex;
+  justify-content: flex-end;  
+  align-items: center;
+  gap: 6px;
+  opacity: 1;
+}
+
+.ingredients-link a {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: "Manrope", sans-serif;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 180%;
+  letter-spacing: 0;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #DC7444;
+  border-bottom: 1px solid #DC7444;
+  padding-bottom: 2px;
+
+
+}
+
+.ingredients-link .plus-icon {
+  width: 12px;
+  height: 12px;
+  display: block;
+  flex-shrink: 0;
+  
+}   
+
+/* Information */
+
+.information {
+
+  width: 1440px;
+  height: 123px;
+  box-sizing: border-box;
+  padding: 24px 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  border-style: solid;
+  border-color: #282829;
+  border-width: 1px 0 1px 0;
+  opacity: 1;
+}
+
+.information h2 {
+  margin: 0;
+  width: 1340px;
+  height: 29px;
+  font-family: "Manrope", sans-serif;
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 110%;
+  letter-spacing: 0;
+  text-transform: uppercase;
+  color: #000000;
+}
+
+.information-list {
+  width: 1340px;
+  height: 16px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 40px;
+}
+
+.information-list span {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: "Manrope", sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 180%;
+  letter-spacing: 0;
+  color: #262626;
+}
+.info-list{
+    width: 166px;
+    height: 16px;
+    gap: 8px;
+}
+.cross-icon {
+  display: block;
+  flex-shrink: 0;
+}
+
+
+/* Footer */
+
+.footer {
+    padding: 25px 5%;
+    background: #efeee7;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.footer p {
+    font-size: 11px;
+    letter-spacing: 1.5px;
+    font-weight: 700;
+}
+
+.footer button {
+    background: var(--text);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 12px 22px;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.footer button:hover {
+    background: #676752;
+}
+
+/* =========================================================
+   RESPONSIVE: Teblet + Mobile
+   ========================================================= */
+
+@media (max-width: 1024px) {
+
+  img { max-width: 100%; }
+
+  .page {
+    width: 100%;
+    height: auto;
+  }
+
+  /* ---------- Hero ---------- */
+  .hero-sec {
+    width: 100%;
+    height: auto;
+  }
+
+  .hero {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    padding: 28px 24px 36px;
+    overflow: hidden;
+  }
+
+  .hero-heading {
+    order: 1;
+    width: 100%;
+    height: auto;
+    gap: 16px;
+  }
+
+  .hero h1 {
+    width: 100%;
+    font-size: 9vw;
+    line-height: 120%;
+    text-align: left;
+  }
+
+  .hero-product {
+    order: 2;
+    width: 100%;
+    height: auto;
+    min-height: 0;
+    display: flex;
+    justify-content: center;
+    grid-column: auto;
+    grid-row: auto;
+  }
+
+  .hero-tablet {
+    position: static;
+    display: block;
+    width: 60%;
+    max-width: 420px;
+    height: auto;
+  }
+
+  .hero-bottom-heading {
+    order: 3;
+    position: static;
+    width: 100%;
+    height: auto;
+    gap: 16px;
+    font-size: 9vw;
+    line-height: 120%;
+    align-items: flex-end;
+  }
+
+  .hero-description {
+    order: 4;
+    position: relative;
+    top: auto;
+    left: auto;
+    width: 100%;
+    max-width: 520px;
+    height: auto;
+    padding: 28px 28px 28px 28px;
+  }
+
+  .hero-description p {
+    width: 100%;
+    height: auto;
+    font-size: 16px;
+  }
+
+  /* ---------- Features (2 x 2) ---------- */
+  .features {
+    width: 100%;
+    height: auto;
+    grid-template-columns: repeat(2, 1fr);
+    border: 0;
+    border-bottom: 1px solid #282829;
+  }
+
+  .features .feature-card,
+  .features .feature-card:last-child {
+    width: 100%;
+    height: auto;
+    padding: 24px 24px 28px;
+    border: 0;
+    border-top: 1px solid #282829;
+    border-right: 1px solid #282829;
+  }
+
+  .features .feature-card:nth-child(even) {
+    border-right: 0;
+  }
+
+  .feature-card h3 {
+    width: 100%;
+    height: auto;
+    margin: 0 0 12px;
+  }
+
+  .feature-card p {
+    width: 100%;
+    height: auto;
+  }
+
+  /* ---------- Highlight banner ---------- */
+  .highlight-banner {
+    width: auto;
+    height: auto;
+    min-height: 88px;
+    margin: 40px 24px;
+    padding: 20px 24px;
+    gap: 20px;
+  }
+
+  .highlight-banner p {
+    width: auto;
+    height: auto;
+    font-size: 20px;
+    line-height: 140%;
+    white-space: normal;
+    text-align: left;
+  }
+
+  /* ---------- Ingredients ---------- */
+  .ingredients {
+    grid-template-columns: 1fr;
+    height: auto;
+    margin-top: 20px;
+  }
+
+  .ingredients-image {
+    width: 100%;
+    height: 420px;
+    border-left: 0;
+  }
+    .ingredients-image {
+    height: auto;
+  }
+
+  .bottle-photo {
+    width: 100%;
+    height: auto;
+    object-fit: initial;
+  }
+
+  .ingredients-content {
+    width: 100%;
+    height: auto;
+  }
+
+  .ingredients-content h2 {
+    width: 100%;
+    height: auto;
+    padding: 24px 24px;
+    font-size: 40px;
+  }
+
+  .ingredient-item {
+    width: 100%;
+    height: auto;
+    padding: 24px;
+  }
+
+  .ingredient-item h3 {
+    width: auto;
+    height: auto;
+    margin: 0 0 8px;
+  }
+
+  .ingredient-item p {
+    width: auto;
+    height: auto;
+  }
+
+  /* ---------- See all link ---------- */
+  .ingredients-link {
+    height: auto;
+    padding: 24px;
+  }
+
+  .ingredients-link a {
+    line-height: 1.4;
+  }
+
+  /* ---------- Information ---------- */
+  .information {
+    width: 100%;
+    height: auto;
+    padding: 28px 24px;
+    gap: 24px;
+  }
+
+  .information h2 {
+    width: 100%;
+    height: auto;
+    font-size: 30px;
+  }
+
+  .information-list {
+    width: 100%;
+    height: auto;
+    gap: 16px 28px;
+  }
+
+  .information-list span {
+    font-size: 16px;
+    line-height: 150%;
+  }
+}
+
+
+/* ================= MOBILE ================= */
+@media (max-width: 600px) {
+
+  /* ---------- Hero ---------- */
+  .hero {
+    gap: 20px;
+    padding: 24px 16px 32px;
+  }
+
+  .hero-heading,
+  .hero-bottom-heading {
+    gap: 10px;
+  }
+
+  .hero h1,
+  .hero-bottom-heading {
+    font-size: 11vw;
+  }
+
+  .hero-tablet {
+    width: 75%;
+  }
+
+  .hero-description {
+    max-width: 100%;
+    padding: 24px 20px 24px 22px;
+  }
+
+  .hero-description p {
+    font-size: 14px;
+    line-height: 175%;
+  }
+
+  /* ---------- Features (1 column) ---------- */
+  .features {
+    grid-template-columns: 1fr;
+  }
+
+  .features .feature-card,
+  .features .feature-card:last-child {
+    padding: 22px 16px 24px;
+    border-right: 0;
+  }
+
+  .feature-card h3 {
+    font-size: 17px;
+  }
+
+  .feature-card p {
+    font-size: 14px;
+  }
+
+  .feature-card p br {
+    display: none;
+  }
+
+  /* ---------- Highlight banner ---------- */
+  .highlight-banner {
+    flex-direction: column;
+    margin: 28px 16px;
+    padding: 20px 16px;
+    gap: 12px;
+  }
+
+  .highlight-banner p {
+    font-size: 16px;
+    text-align: center;
+  }
+
+  /* ---------- Ingredients ---------- */
+  .ingredients-image {
+    height: 320px;
+  }
+
+  .ingredients-content h2 {
+    padding: 20px 16px;
+    font-size: 28px;
+  }
+
+  .ingredient-item {
+    padding: 20px 16px;
+  }
+
+  .ingredient-item h3 {
+    font-size: 15px;
+  }
+
+  .ingredient-item p {
+    font-size: 14px;
+  }
+
+  /* ---------- See all link ---------- */
+  .ingredients-link {
+    padding: 20px 16px;
+  }
+
+  .ingredients-link a {
+    font-size: 13px;
+  }
+
+  /* ---------- Information ---------- */
+  .information {
+    padding: 24px 16px;
+    gap: 20px;
+  }
+
+  .information h2 {
+    font-size: 24px;
+  }
+
+  .information-list {
+    gap: 14px 20px;
+  }
+
+  .information-list span {
+    font-size: 15px;
+  }
+}
+
+/* =========================================================
+   LAPTOP / SMALL DESKTOP (1025px se 1439px)
+   ========================================================= */
+
+@media (min-width: 1025px) and (max-width: 1439px) { .page { zoom: 0.72; } }
+@media (min-width: 1100px) and (max-width: 1439px) { .page { zoom: 0.76; } }
+@media (min-width: 1180px) and (max-width: 1439px) { .page { zoom: 0.82; } }
+@media (min-width: 1250px) and (max-width: 1439px) { .page { zoom: 0.87; } }
+@media (min-width: 1300px) and (max-width: 1439px) { .page { zoom: 0.90; } }
+@media (min-width: 1366px) and (max-width: 1439px) { .page { zoom: 0.95; } }
+
